@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MVPSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMD-mt-pPb">
+                                <rect key="frame" x="16" y="200" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lzy-2Z-4OK">
+                                <rect key="frame" x="16" y="238" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjs-cj-YAB">
+                                <rect key="frame" x="16" y="276" width="343" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cLB-uK-Y3R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FMD-mt-pPb" firstAttribute="trailing" secondItem="lzy-2Z-4OK" secondAttribute="trailing" id="3YQ-hN-B8X"/>
+                            <constraint firstItem="FMD-mt-pPb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="7Un-k6-DIC"/>
+                            <constraint firstItem="FMD-mt-pPb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QVQ-kd-GFj"/>
+                            <constraint firstItem="lzy-2Z-4OK" firstAttribute="top" secondItem="FMD-mt-pPb" secondAttribute="bottom" constant="8" symbolic="YES" id="QVV-FY-g1b"/>
+                            <constraint firstItem="lzy-2Z-4OK" firstAttribute="trailing" secondItem="Fjs-cj-YAB" secondAttribute="trailing" id="STs-Ee-lmH"/>
+                            <constraint firstItem="FMD-mt-pPb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ybq-mG-6e2"/>
+                            <constraint firstItem="FMD-mt-pPb" firstAttribute="leading" secondItem="lzy-2Z-4OK" secondAttribute="leading" id="lkU-oF-oLN"/>
+                            <constraint firstItem="lzy-2Z-4OK" firstAttribute="leading" secondItem="Fjs-cj-YAB" secondAttribute="leading" id="qP1-Zw-Job"/>
+                            <constraint firstItem="Fjs-cj-YAB" firstAttribute="top" secondItem="lzy-2Z-4OK" secondAttribute="bottom" constant="8" symbolic="YES" id="vDO-e0-DEb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="account" destination="FMD-mt-pPb" id="0OW-1k-7WV"/>
+                        <outlet property="password" destination="lzy-2Z-4OK" id="L2R-t5-gKl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+</document>
