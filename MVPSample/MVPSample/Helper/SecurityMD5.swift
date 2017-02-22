@@ -10,7 +10,7 @@ import Foundation
 
 struct SecurityMD5 {
     var target:String
-    func md5() -> String {
+    func value() -> String {
         let string = target
         var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
         if let data = string.data(using: String.Encoding.utf8) {

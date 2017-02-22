@@ -30,7 +30,7 @@ enum ApiActionType:String{
     case Login = "login"
 }
 ///URL
-enum IP:String{
+enum Connection:String{
     case TEST = "http://www.httpbin.org/post"
     case DJANGO = "http://127.0.0.1:8000/api/"
 }
@@ -52,7 +52,7 @@ class ApiHelper:NSObject,URLSessionDelegate,URLSessionTaskDelegate {
         self.delegate = delegate
     }
     
-    init(url:IP,delegate:ApiHelperDelegate) {
+    init(url:Connection,delegate:ApiHelperDelegate) {
         super.init()
         self.delegate = delegate
         self.setupURL(url)
@@ -64,12 +64,12 @@ class ApiHelper:NSObject,URLSessionDelegate,URLSessionTaskDelegate {
         self.setupType(type)
     }
     ///設定action，server位址
-    func setup(_ url:IP,_ type:ApiActionType){
+    func setup(_ url:Connection,_ type:ApiActionType){
         self.setupURL(url)
         self.setupType(type)
     }
     ///設定server位址
-    func setupURL(_ url:IP){
+    func setupURL(_ url:Connection){
         self.urlstring = url.rawValue
     }
     ///設定上傳類型
@@ -203,7 +203,7 @@ class ApiHelper:NSObject,URLSessionDelegate,URLSessionTaskDelegate {
     //==================================================
     func UploadRequest(img:UIImage)
     {
-        let url = URL(string: IP.TEST.rawValue)
+        let url = URL(string: Connection.TEST.rawValue)
         
         let request = NSMutableURLRequest(url: url!)
         request.httpMethod = "POST"
