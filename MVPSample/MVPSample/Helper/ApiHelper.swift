@@ -32,6 +32,7 @@ enum ApiActionType:String{
 ///URL
 enum IP:String{
     case TEST = "http://www.httpbin.org/post"
+    case DJANGO = "http://127.0.0.1:8000/api/"
 }
 
 /// # 處理網路，與伺服器連線，post資料...相關處理

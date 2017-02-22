@@ -23,14 +23,29 @@ class LoginPresenter:Presenter{
         for n in mirror.children {
             json.addItem(key: n.label!, value: n.value)
         }
-        api.setup(.TEST, .Login)
+        api.setup(.DJANGO, .Login)
         api.setupJSON(json.value())
         api.postJSON()
         
     }
     
     override func apiSuccess(dataType: ApiActionType, api: ApiHelper) {
-        self.loginView?.showLoginSuccess("\(dataType.rawValue) is Success")
+        switch dataType {
+        case .Login:
+            if api.isCorrect(){
+                viewMain {
+                    self.loginView?.showLoginSuccess("\(dataType.rawValue) is Success")
+                }
+            }else{
+                viewMain {
+                    self.loginView?.showLoginSuccess("\(dataType.rawValue) is Fail")
+                }
+            }
+        default:
+            break
+        }
+        
+        
     }
     
 }

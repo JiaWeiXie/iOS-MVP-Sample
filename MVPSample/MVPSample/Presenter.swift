@@ -25,4 +25,10 @@ class Presenter:ApiHelperDelegate{
     func apiError(error: Error,errorType:ApiErrorType){
         self.view?.showErrorMessage(errorType.rawValue)
     }
+    
+    func viewMain(action:@escaping ()->Void){
+        DispatchQueue.main.async {
+            action()
+        }
+    }
 }

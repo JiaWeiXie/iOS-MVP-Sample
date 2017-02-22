@@ -193,7 +193,6 @@
 				TargetAttributes = {
 					AF76A6211E5CAF0A003F59DF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 7K333GRG33;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -373,7 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7K333GRG33;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MVPSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BIRC.AppTeam.MVPSample;
@@ -387,7 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7K333GRG33;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MVPSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BIRC.AppTeam.MVPSample;
@@ -416,6 +415,7 @@
 				AF76A6361E5CAF0A003F59DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
